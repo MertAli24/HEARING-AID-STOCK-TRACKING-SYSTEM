@@ -1,0 +1,118 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Ana sayfa ile aynı font */
+    background-color: #212529; /* Ana sayfa ile aynı koyu arka plan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ekran yüksekliğinin tamamını kapla */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-container {
+    background-color: #ffffff; /* Beyaz arka plan */
+    padding: 50px; /* Padding artırıldı */
+    border-radius: 8px; /* Ana sayfa ile uyumlu köşeler */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Daha belirgin ve yaygın gölge */
+    width: 100%;
+    max-width: 450px; /* Maksimum genişlik */
+    text-align: center;
+    box-sizing: border-box;
+    border-top: 6px solid #ffc107; /* Sarı üst kenarlık */
+    position: relative; /* İçindeki öğeler için konumlandırma */
+    overflow: hidden; /* Köşelerin düzgün görünmesi için */
+}
+
+/* Sarı köşe efekti (isteğe bağlı, daha modern bir dokunuş) */
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #ffc107, transparent);
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+.login-container h2 {
+    margin-top: 0;
+    margin-bottom: 40px; /* Boşluk artırıldı */
+    color: #333; /* Koyu gri başlık */
+    font-size: 30px; /* Font boyutu artırıldı */
+    font-weight: 700; /* Daha kalın font */
+    position: relative; /* İçeriklerin öne gelmesi için */
+    z-index: 1;
+}
+
+.form-group {
+    margin-bottom: 25px; /* Boşluk artırıldı */
+    text-align: left;
+    position: relative; /* İçeriklerin öne gelmesi için */
+    z-index: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px; /* Boşluk artırıldı */
+    color: #555; /* Orta gri etiket */
+    font-weight: bold;
+    font-size: 16px; /* Font boyutu artırıldı */
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 14px; /* Padding artırıldı */
+    border: 1px solid #ccc; /* Açık gri kenarlık */
+    border-radius: 4px; /* Ana sayfa ile uyumlu köşeler */
+    box-sizing: border-box;
+    font-size: 17px; /* Font boyutu artırıldı */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff; /* Mavi focus rengi */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Focus gölgesi */
+}
+
+
+.form-group button {
+    width: 100%;
+    padding: 14px; /* Padding artırıldı */
+    background-color: #003366; /* Koyu lacivert buton */
+    color: white;
+    border: none;
+    border-radius: 4px; /* Ana sayfa ile uyumlu köşeler */
+    cursor: pointer;
+    font-size: 18px; /* Font boyutu artırıldı */
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 15px; /* Üst boşluk artırıldı */
+    position: relative; /* İçeriklerin öne gelmesi için */
+    z-index: 1;
+}
+
+.form-group button:hover {
+    background-color: #004080; /* Daha koyu lacivert */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.error-message {
+    color: #dc3545; /* Kırmızı hata rengi */
+    background-color: #f8d7da; /* Açık kırmızı arka plan */
+    border: 1px solid #f5c6cb; /* Kırmızı kenarlık */
+    padding: 12px; /* Padding artırıldı */
+    margin-top: 25px; /* Üst boşluk artırıldı */
+    border-radius: 4px;
+    font-size: 15px;
+    text-align: center;
+    position: relative; /* İçeriklerin öne gelmesi için */
+    z-index: 1;
+}

@@ -1,0 +1,104 @@
+/* add_product.css */
+
+/* Genel form stilleri */
+.content form {
+    background-color: #ffffff; /* Beyaz arka plan */
+    padding: 40px; /* Padding artırıldı */
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    max-width: 700px; /* Maksimum genişlik artırıldı */
+    margin: 0 auto; /* Formu ortala */
+}
+
+.content .form-group {
+    margin-bottom: 25px; /* Boşluk artırıldı */
+    text-align: left;
+}
+
+.content .form-group label {
+    display: block;
+    margin-bottom: 10px; /* Boşluk artırıldı */
+    color: #555;
+    font-weight: bold;
+    font-size: 16px; /* Font boyutu artırıldı */
+}
+
+.content .form-group input[type="text"],
+.content .form-group input[type="number"] {
+    width: 100%;
+    padding: 14px; /* Padding artırıldı */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 17px; /* Font boyutu artırıldı */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content .form-group input[type="text"]:focus,
+.content .form-group input[type="number"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+}
+
+
+.content .form-group button {
+    width: auto;
+    padding: 12px 25px; /* Padding artırıldı */
+    background-color: #28a745; /* Yeşil buton */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px; /* Font boyutu artırıldı */
+    font-weight: 500;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 15px; /* Boşluk artırıldı */
+}
+
+.content .form-group button:hover {
+    background-color: #218838; /* Daha koyu yeşil */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* İptal butonu stili */
+.content .form-group .cancel-button {
+    display: inline-block;
+    padding: 12px 25px; /* Padding artırıldı */
+    background-color: #6c757d; /* Gri buton */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 17px; /* Font boyutu artırıldı */
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.content .form-group .cancel-button:hover {
+    background-color: #5a6268; /* Daha koyu gri */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Mesaj stilleri */
+.success-message {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 15px; /* Padding artırıldı */
+    margin-bottom: 25px; /* Boşluk artırıldı */
+    border-radius: 4px;
+    font-size: 16px; /* Font boyutu artırıldı */
+}
+
+.error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 15px; /* Padding artırıldı */
+    margin-bottom: 25px; /* Boşluk artırıldı */
+    border-radius: 4px;
+    font-size: 16px; /* Font boyutu artırıldı */
+}

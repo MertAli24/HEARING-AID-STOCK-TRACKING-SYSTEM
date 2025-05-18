@@ -1,0 +1,121 @@
+/* list_products.css */
+
+/* Stok sorgulama formu stilleri */
+.stock-query-form {
+    background-color: #e0f7fa; /* Çok açık mavi arka plan */
+    padding: 30px; /* Padding artırıldı */
+    border-radius: 8px;
+    border: 1px solid #b2ebf2;
+    margin-bottom: 30px; /* Boşluk artırıldı */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    max-width: 700px; /* Maksimum genişlik artırıldı */
+    margin: 0 auto 30px auto; /* Formu ortala ve alt boşluk ekle */
+}
+
+.stock-query-form .form-group {
+    margin-bottom: 25px; /* Boşluk artırıldı */
+    text-align: left;
+}
+
+.stock-query-form .form-group label {
+    display: block;
+    margin-bottom: 10px; /* Boşluk artırıldı */
+    color: #004d40;
+    font-weight: bold;
+    font-size: 16px; /* Font boyutu artırıldı */
+}
+
+.stock-query-form .form-group select {
+    width: 100%;
+    padding: 12px; /* Padding artırıldı */
+    border: 1px solid #b2dfdb;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 16px; /* Font boyutu artırıldı */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stock-query-form .form-group select:focus {
+     outline: none;
+    border-color: #004d40;
+    box-shadow: 0 0 6px rgba(0, 77, 64, 0.25);
+}
+
+
+.stock-query-form button#query-stock-button {
+    display: block;
+    width: 100%;
+    padding: 14px; /* Padding artırıldı */
+    background-color: #00796b; /* Teal rengi */
+    color: white;
+    border: none;
+    border-radius: 6px; /* Daha yuvarlak köşeler */
+    cursor: pointer;
+    font-size: 18px; /* Font boyutu artırıldı */
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 15px; /* Üst boşluk artırıldı */
+}
+
+.stock-query-form button#query-stock-button:hover:not(:disabled) {
+    background-color: #004d40;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stock-query-form button#query-stock-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+/* Stok bilgi alanı stilleri */
+.stock-info {
+    background-color: #ffffff; /* Beyaz arka plan */
+    padding: 25px; /* Padding artırıldı */
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    max-width: 700px; /* Maksimum genişlik artırıldı */
+    margin: 0 auto; /* Bilgi alanını ortala */
+    gap: 20px; /* Boşluk artırıldı */
+}
+
+.stock-info p {
+    margin: 0;
+    font-size: 20px; /* Font boyutu artırıldı */
+    color: #004d40;
+    font-weight: bold;
+}
+
+.stock-info strong {
+    color: #00796b;
+}
+
+.stock-info .sell-button {
+    padding: 12px 25px; /* Padding artırıldı */
+    background-color: #e53935; /* Kırmızı tonu */
+    color: white;
+    border: none;
+    border-radius: 6px; /* Daha yuvarlak köşeler */
+    cursor: pointer;
+    font-size: 17px; /* Font boyutu artırıldı */
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stock-info .sell-button:hover:not(:disabled) {
+    background-color: #c62828;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stock-info .sell-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}

@@ -1,0 +1,248 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #212529; /* Koyu gri/siyah arka plan */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px; /* Üstten boşluk artırıldı */
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Maksimum genişlik artırıldı */
+    margin: 0 auto;
+    background-color: #ffffff; /* Beyaz arka plan */
+    padding: 40px;
+    border-radius: 8px; /* Daha keskin köşeler */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Daha belirgin gölge */
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ffc107; /* Sarı kenarlık */
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    margin: 0;
+    color: #333;
+    font-size: 28px;
+    font-weight: 700; /* Daha kalın font */
+}
+
+.logout-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dc3545; /* Kırmızı */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    background-color: #003366; /* Koyu lacivert */
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    border-right: 1px solid #004080; /* Daha koyu lacivert ayırıcı */
+}
+
+.menu li:last-child {
+    border-right: none;
+}
+
+.menu a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #ffffff; /* Beyaz menü yazısı */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    background-color: #ffc107; /* Sarı hover rengi */
+    color: #212529; /* Koyu gri hover yazısı */
+}
+
+.content h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Yeni Eklenen Bölümlerin Stilleri */
+.summary-cards {
+    display: grid; /* Kartları grid ile düzenle */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Duyarlı sütunlar */
+    gap: 20px; /* Kartlar arası boşluk */
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: #f8f9fa; /* Açık gri kart arka planı */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #007bff; /* Mavi kenarlık */
+}
+
+.card.low-stock {
+     border-left-color: #ffc107; /* Sarı kenarlık */
+}
+
+.card.out-of-stock {
+     border-left-color: #dc3545; /* Kırmızı kenarlık */
+}
+
+
+.card h4 {
+    margin-top: 0;
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card .count {
+    font-size: 32px; /* Sayı font boyutu */
+    font-weight: bold;
+    color: #007bff; /* Mavi sayı rengi */
+}
+
+.card.low-stock .count {
+    color: #ffc107; /* Sarı sayı rengi */
+}
+
+.card.out-of-stock .count {
+    color: #dc3545; /* Kırmızı sayı rengi */
+}
+
+
+.latest-products, .quick-links {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.latest-products h4, .quick-links h4 {
+    margin-top: 0;
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.latest-products ul, .quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.latest-products li {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.quick-links a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #007bff; /* Mavi link rengi */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.quick-links a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Responsive iyileştirmeler */
+@media (max-width: 768px) {
+    body {
+        padding-top: 20px;
+    }
+    .container {
+        padding: 20px;
+    }
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header h2 {
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+    .logout-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+     .menu ul {
+        flex-direction: column;
+    }
+    .menu li {
+        border-right: none;
+        border-bottom: 1px solid #004080;
+    }
+     .menu li:last-child {
+        border-bottom: none;
+    }
+    .menu a {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+    .content h3 {
+        font-size: 22px;
+    }
+    .summary-cards {
+        grid-template-columns: 1fr; /* Küçük ekranlarda alt alta */
+    }
+    .card h4 {
+        font-size: 17px;
+    }
+    .card .count {
+        font-size: 28px;
+    }
+    .latest-products h4, .quick-links h4 {
+        font-size: 17px;
+    }
+    .quick-links a {
+        display: block; /* Küçük ekranlarda alt alta */
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+}

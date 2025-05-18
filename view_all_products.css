@@ -1,0 +1,185 @@
+/* view_all_products.css */
+
+/* Filtre formu stilleri */
+.filter-form {
+    background-color: #e0f7fa; /* Çok açık mavi arka plan */
+    padding: 30px; /* Padding artırıldı */
+    border-radius: 8px;
+    border: 1px solid #b2ebf2;
+    margin-bottom: 30px; /* Boşluk artırıldı */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.filter-form form {
+    display: flex;
+    gap: 20px; /* Boşluk artırıldı */
+    align-items: flex-end;
+}
+
+.filter-form .form-group {
+    margin-bottom: 0;
+    min-width: 200px; /* Minimum genişlik artırıldı */
+    flex: 1; /* Esnek genişlik */
+}
+
+.filter-form .form-group:last-child {
+     flex: none; /* Butonun esnek genişlik almasını engelle */
+     min-width: auto; /* Minimum genişliği kaldır */
+}
+
+
+.filter-form .form-group label {
+    display: block;
+    margin-bottom: 10px; /* Boşluk artırıldı */
+    color: #004d40;
+    font-weight: bold;
+    font-size: 16px; /* Font boyutu artırıldı */
+}
+
+.filter-form .form-group input[type="text"],
+.filter-form .form-group select {
+    width: 100%;
+    padding: 12px; /* Padding artırıldı */
+    border: 1px solid #b2dfdb;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-size: 16px; /* Font boyutu artırıldı */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-form .form-group input[type="text"]:focus,
+.filter-form .form-group select:focus {
+    outline: none;
+    border-color: #004d40;
+    box-shadow: 0 0 6px rgba(0, 77, 64, 0.25);
+}
+
+.filter-form .form-group button {
+    padding: 12px 25px; /* Padding artırıldı */
+    background-color: #00796b; /* Teal rengi */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px; /* Font boyutu artırıldı */
+    font-weight: 500;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    height: 42px; /* Yükseklik ayarı */
+    margin-top: 0; /* Hizalama için */
+}
+
+.filter-form .form-group button:hover {
+    background-color: #004d40;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Tablo stilleri */
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Gölge artırıldı */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.content th, .content td {
+    border: 1px solid #e0f2f7;
+    padding: 15px; /* Padding artırıldı */
+    text-align: left;
+}
+
+.content th {
+    background-color: #b2ebf2; /* Açık mavi başlık arka planı */
+    font-weight: bold;
+    color: #004d40;
+    font-size: 16px; /* Font boyutu artırıldı */
+}
+
+.content tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.content tr:hover {
+    background-color: #e0f7fa;
+}
+
+/* Stok durumu için özel sınıflar */
+.content .low-stock {
+    color: #ff9800; /* Turuncu */
+    font-weight: bold;
+}
+
+.content .out-of-stock {
+    color: #e53935; /* Kırmızı */
+    font-weight: bold;
+}
+
+/* İşlemler sütunu stilleri */
+.content td.actions {
+    white-space: nowrap;
+    min-width: 200px; /* İşlemler sütunu için minimum genişlik */
+}
+
+.content td.actions a,
+.content td.actions button {
+    display: inline-block;
+    padding: 8px 15px; /* Padding artırıldı */
+    margin-right: 10px; /* Boşluk artırıldı */
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 15px; /* Font boyutu artırıldı */
+    cursor: pointer;
+    border: none;
+    vertical-align: middle;
+    text-align: center;
+    min-width: 70px; /* Minimum genişlik artırıldı */
+}
+
+.content td.actions a:last-child,
+.content td.actions button:last-child {
+    margin-right: 0;
+}
+
+
+/* Düzenle butonu stili (Mavimsi ton) */
+.content td.actions .edit-link {
+    background-color: #29b6f6; /* Açık mavi */
+    color: white;
+}
+
+.content td.actions .edit-link:hover {
+    background-color: #039be5; /* Daha koyu */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* SAT butonu stili (Yeşil ton) */
+.content td.actions .sell-button {
+    background-color: #66bb6a; /* Açık yeşil */
+    color: white;
+}
+
+.content td.actions .sell-button:hover:not(:disabled) {
+     background-color: #43a047; /* Daha koyu yeşil */
+     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content td.actions .sell-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Sil butonu stili (Kırmızı ton) */
+.content td.actions .delete-link {
+    background-color: #ef5350; /* Açık kırmızı */
+    color: white;
+}
+
+.content td.actions .delete-link:hover {
+    background-color: #e53935; /* Daha koyu kırmızı */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
